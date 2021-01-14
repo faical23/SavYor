@@ -1,0 +1,871 @@
+body.space-top {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    text-align: -moz-center;
+    text-align: -webkit-center;
+    background-image: url(../img/background/Main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+ 
+    .container{
+        max-width: 1193px;
+    }
+
+}
+.principal-section{
+    background-image: url(../img/background/Group815.jpg);
+    border-radius: 40px;
+    max-width:1100px;
+    //box-shadow: 21px 21px 0px rgba(198, 216, 250, 0.25);
+    box-shadow: -23px 23px 0px rgba(198, 216, 250, 0.25);
+}
+
+//// strat hero 1
+.hero1{
+    background-image: url(../img/background/hero-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    .row{
+        margin-right: -5px;
+        margin-left: 30px;
+    }
+    .text-hero1{
+        text-align: left;
+        .nav-bar{
+            a{
+                padding: 20px 20px;
+                font-family: 'Montserrat-Regular';
+                font-size: 20px;
+                line-height: 28px;
+                font-weight: 400;
+                color: $secondry-400;
+                
+                &:hover{
+                    color:$primary-100;
+                }
+            }
+        }
+        .logo-hero{
+            max-width: 281px;
+            padding-bottom: 25px;
+            padding-top: 30px;
+        }
+        h1{
+            font-size: 41px;
+            font-weight: 700;
+            font-style: normal;
+            font-family: 'AgencyFB-Bold';
+            line-height: 39px;
+        }
+        h6{
+            font-size: 26px;
+            font-family:'AgencyFB-Regular' ;
+            line-height: 30px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+        .space-button{
+           padding-top: 25px;
+            .button{
+                background-color:$primary-100;
+                width: 300px;
+                max-width: 300px;
+                padding: 19px 28px;
+                border-radius: 50px;
+                font-size: 16px;  
+                font-family: 'Montserrat-Medium';     
+                font-style: normal;
+                font-weight: 500;
+                color: white;
+                &:hover{
+                    background-color: white;
+                    color :$primary-100;
+                    border:1px solid $primary-100;
+                }
+             }
+        }
+    }
+    .img-hero{
+        text-align: center;
+        .hero-img{
+            max-width: 585px;
+                position: relative;
+                right: 30px;
+                top: 42px;
+            }
+    }
+
+}
+
+//// end hero1
+
+///// start mini icons
+.view-icon{
+    position: relative;
+    bottom: 210px;
+    left: 257px;
+    width: 17%;
+}
+.minicircle-icon{
+    width: 15%;
+    position: relative;
+    right: 417px;
+    bottom: 134px;
+}
+.camera-icon{
+    width: 11%;
+    position: relative;
+    bottom: 600px;
+    left: 530px;
+}
+.minicircle2-icon{
+    width: 17%;
+    bottom: 745px;
+    position: relative;
+    right: 200px;
+}
+.triangle-color-icon{
+    position: relative;
+    width: 10%;
+    left: 200px;
+    bottom: 100px;
+}
+///// end mini icons
+
+////// media hero1
+@include for-size(desktop-down){
+    .principal-section{
+        max-width:900px;
+    }
+    .hero1{
+        .text-hero1{
+            .nav-bar{
+                a{
+                    padding: 20px 15px;
+                    font-size: 18px;
+                }
+            }
+            .logo-hero{
+                max-width: 281px;
+                padding-bottom: 25px;
+                padding-top: 30px;
+            }
+            h1{
+                font-size: 34px;
+            }
+            h6{
+                font-size: 22px;
+                padding-bottom: 9px;
+                padding-top: 5px;
+            }
+        }
+        .img-hero{
+            text-align: center;
+            .hero-img{
+               /* max-width: 785px;
+                right: 389px;
+            */
+            max-width: 485px;
+                }
+        }
+    
+    }
+    .view-icon{
+        bottom: 163px;
+        width: 14%;
+    }
+    .minicircle-icon{
+        width: 14%;
+        right: 324px;
+        bottom: 101px;
+    }
+    .camera-icon{
+        bottom: 482px;
+        left: 433px;
+    }
+    .minicircle2-icon{
+        bottom: 632px;
+        right: 97px;
+    }
+    .triangle-color-icon{
+        width: 9%;
+        left: 178px;
+    }
+
+}
+@include for-size(tablet-landscape-down){
+    .principal-section{
+        max-width:700px;
+    }
+    .hero1{
+        .text-hero1{
+            .nav-bar{
+                a{
+                    padding: 17px 13px;
+                    font-size: 14px;
+                }
+            }
+            .logo-hero{
+                max-width: 191px;
+                padding-bottom: 10px;
+                padding-top: 5px;
+            }
+            h1{
+                font-size: 26px;
+                line-height: 25px;            }
+            h6{
+                font-size: 20px;
+                padding-bottom: auto;
+                padding-top: auto;
+            }
+            .space-button{
+                .button{
+                   padding: 15px 13px;
+                   border-radius: 50px;
+                   font-size: 14px;
+                 }
+            }
+        }
+        .img-hero{
+            text-align: center;
+            .hero-img{
+                max-width: 296px;
+                right: 12px;
+                }
+        }
+
+
+    }
+    .view-icon{
+        left: 203px;
+        bottom: 131PX;
+    }
+    .minicircle-icon{
+        right: 251px;
+        bottom: 68px;
+    }
+    .camera-icon{
+        bottom: 321px;
+        left: 346px;
+    }
+    .minicircle2-icon{
+        bottom: 425px;
+    }
+    .triangle-color-icon{
+        left: 135px;
+    }
+
+}
+@include for-size(tablet-portrait-down){
+    .principal-section{
+        max-width:500px;
+    }
+    .hero1{
+        .text-hero1{
+            .nav-bar{
+                a{
+                    padding: 18px 2px;
+                    font-size: 12px;
+                }
+            }
+            .logo-hero{
+                max-width: 173px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            h1{
+                    font-size: 23px;
+line-height: 22px;  
+          }
+            h6{
+                font-size: 18px;
+                line-height: 21px;
+            }
+            .space-button{
+                padding-top: 0px;
+                .button{
+                    padding: 10px 5px;
+                    font-size: 11px;
+                 }
+            }
+        }
+        .img-hero{
+            .hero-img{
+  
+                max-width: 255px;
+                right: 8px;
+                top: 39px;
+                }
+        }
+
+
+    }
+    .view-icon{
+        left: 142px;
+        top: -124px;
+    }
+    .minicircle-icon{
+        right: 183px;
+        bottom: 62px;
+    }
+    .camera-icon{
+        bottom: 321px;
+        left: 246px;
+    }
+    .minicircle2-icon{
+        bottom: 380px;
+        right: 50px;
+    }
+    .triangle-color-icon{
+        left: 95px;
+    }
+
+}
+@include for-size(phone-only){
+    .principal-section{
+        max-width:300px;
+    }
+    .hero1{
+        text-align: center;
+        height: 751px;
+        .row{
+            display: block;
+        }
+        .text-hero1{
+            .nav-bar{
+                    display: ruby;
+            }
+            .logo-hero{
+                max-width: 173px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            h1,h6,.space-button{
+                width: 186px;
+                text-align: center;
+                padding-top: 10px; 
+          }
+
+        }
+        .img-hero{
+            .hero-img{
+  
+                max-width: 268px;
+                right: 36px;
+                }
+        }
+
+
+    }
+    .view-icon{
+                left: 106px;
+        top: -214px;
+        width: 21%;
+    }
+    .minicircle-icon{
+        right: 114px;
+bottom: 191PX;
+width: 16%;
+    }
+    .camera-icon{
+        bottom: 403px;
+left: 136px;
+width: 13%;
+    }
+    .minicircle2-icon{
+        bottom: 777px;
+        right: 50px;
+    }
+    .triangle-color-icon{
+        left: 44px;
+        bottom: 141px;
+        width: 12%;
+    }
+
+}
+//// end media hero1
+
+
+
+///// start how is work
+.how-it-work{
+    .part1{
+        padding-top: 80px;
+    }
+    .part2{
+        padding-top: 36px;
+    }
+    h1{
+        font-size: 99px;
+        font-weight: 400;
+        font-family: 'AgencyFB-Regular';
+        color: rgb(233, 227, 227);
+        line-height: 25px;
+    }
+    h2{
+        font-size: 35px;
+        font-weight: 400;
+        font-family: 'AgencyFB-Bold';
+    }
+    h3{
+        font-size: 22px;
+        font-weight: 400;
+        font-family: 'AgencyFB-Bold';
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    p{
+        font-family: 'Montserrat-Regular';
+        font-size: 18px;
+        font-style: normal;
+        color: #00485E;
+        line-height: 21px;
+        font-weight: 400;
+    }
+    .nurde{   
+         width: 15%;
+        position: relative;
+        right: 570px;
+        bottom: 270px;
+    }
+    @include for-size(desktop-down){
+        .nurde{
+            right: 470px;
+        }
+    }
+    @include for-size(tablet-landscape-down ){
+        .nurde{
+            right: 370px;
+            bottom: 620px;
+        }
+    }
+    @include for-size(tablet-portrait-down){
+        .nurde{
+            right: 250px;
+            bottom: 1019px;
+            width: 21%;
+        }
+    }
+    @include for-size(phone-only){
+        .part1{
+            padding-top: 0px;
+        }
+        h1{
+            font-size: 45px;
+           line-height: 0px;
+        }
+        .nurde{
+            right: 150px;
+            width: 25%;
+        }
+    }
+   
+}
+
+///// end how it work
+
+
+//// strat fonctionality
+
+.fonctionality{
+    background-color: #ebedf0;
+    padding-top: 46px;
+    height: 1300px;
+    h1{
+        font-size: 99px;
+        font-weight: 400;
+        font-family: 'AgencyFB-Regular';
+        color: rgb(233, 227, 227);
+        line-height: 25px;
+    }
+    h2{
+        font-size: 35px;
+        font-weight: 400;
+        font-family: 'AgencyFB-Bold';
+        padding-bottom: 30px;
+    }
+    h3{
+        font-size: 33px;
+        font-weight: 400;
+        font-family: 'AgencyFB-Bold';
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    p{
+        font-size: 22px;
+        font-style: normal;
+        color: #00485E;
+        line-height: 21px;
+        font-family: 'Montserrat-Light';
+        line-height: 28px;
+        font-weight: 300;
+    }
+    .part1{
+        margin-left: 161px;
+        margin-right: 148px;
+        padding-bottom: 60px;
+        .borse{
+            max-width: 109%;
+            padding-bottom: 18px;
+        }
+    }
+    .part2{
+        .left-img,.right-img{
+            margin-top: 20px;
+        }
+    }
+    .mini-tele{
+        position: relative;
+        bottom: 1000px;
+        left: 600px;
+        }
+    .curbe{
+        position: relative;
+        bottom: 900px;
+        right: 659px;
+    }
+    @include for-size(desktop-down){
+            height: 1300px;
+        .mini-tele{
+            left: 500px;
+            }
+        .curbe{
+            right: 559px;
+        }
+    }
+    @include for-size(tablet-landscape-down ){
+        height: 2300px;
+
+        .mini-tele{
+            left: 400px;
+            width: 28%;
+            bottom: 1400px;  
+              }
+        .curbe{
+            right: 459px;
+            bottom: 1900px;
+                }
+    }
+    @include for-size(tablet-portrait-down){
+        height: 3080px;
+        h1{
+            font-size: 45px;
+           line-height: 0px;
+        }
+        .part1{
+            margin-left: 0px;
+            margin-right: 0px;
+            .borse{
+                padding-left: 28px;
+            }
+        }
+        .mini-tele{
+            left: 320px;
+            bottom: 2100px;
+              }
+        .curbe{
+            right: 309px;
+            bottom: 2700px;
+            width: 24%;
+                }
+    }
+    @include for-size(phone-only){
+        height: 2560px;
+        .mini-tele{
+            left: 179px;
+            bottom: 1600px;
+              }
+        .curbe{
+            right: 192px;
+            bottom: 2000px;
+                }
+    }
+}
+//// end fonctionality
+
+
+//// start downoad 
+.dowload-app{
+    height: 600px;
+    .text-download{
+        padding-left: 196px;
+        padding-top: 151px;
+        h1,span{
+            font-size: 35px;
+            font-family: 'AgencyFB-Bold';
+            font-weight: 700;
+            font-style: normal;
+            line-height: 41px;
+            max-width: 290px;
+            text-align: initial;
+        }
+        span{
+            color :$secondry-200;
+        }
+        img{
+            padding-top: 10px;
+            margin-right: 72px;
+        }
+    }
+    .shop1{
+        width: 160px;
+        position: relative;
+        bottom: 600px;
+        right: 143px;
+    }
+    .camera-triangle{
+        width: 199px;
+        position: relative;
+        bottom: 287px;
+        right: 398px;
+    }
+    .shop2{
+        width: 205px;
+        position: relative;
+        bottom: 608px;
+        left: 327px;
+    }
+    .mini-circle{
+        width: 125px;
+        position: relative;
+           bottom: 413px;
+             left: 735px;
+    }
+    .tele{
+        width: 168px;
+        position: relative;
+        bottom: 225px;
+        left: 172px;
+    }
+@include for-size(desktop-down){
+    height: 450px;
+        .text-download{
+            padding-top: 88px;
+        }
+        .shop1{
+            width: 133px;
+            bottom: 500px;
+            right: 100px;
+        }
+        .camera-triangle{
+            width: 176px;
+            bottom: 249px;
+            right: 305px;
+        }
+        .shop2{
+            width: 167px;
+            bottom: 508px;
+            left: 250px;
+        }
+        .mini-circle{
+            width: 100px;
+            bottom: 363px;
+            left: 610px;
+        }
+        .tele{
+            width: 141px;
+            bottom: 220px;
+            left: 139px;
+        }
+}
+@include for-size(tablet-landscape-down){
+    height: 400px;
+    .text-download{
+        padding-top: 50px;
+        padding-left: 113px;
+    }
+    .shop1{
+        bottom: 371px;
+        right: 102px;
+    }
+    .camera-triangle{
+        bottom: 127px;
+        right: 314px;
+    }
+    .shop2{
+        width: 130px;
+        bottom: 392px;
+        left: 96px;
+    }
+    .mini-circle{
+        bottom: 259px;
+        left: 421px;
+    }
+    .tele{
+        bottom: 262px;
+        left: 329px;
+    }
+}
+@include for-size(tablet-portrait-down){
+    height: 830px;
+    .shop1{
+        bottom: 846px;
+        right: 72px;
+    }
+    .camera-triangle{
+        bottom: 179px;
+    }
+    .shop2{
+        bottom: 955px;
+        left: 289px;
+    }
+    .mini-circle{
+        bottom: 459px;
+        left: 251px;
+    }
+    .tele{
+        bottom: 362px;
+        left: 160px;
+    }
+}
+@include for-size(phone-only){
+    padding-top: 73px;
+    height: 600px;
+    .text-download{
+        padding-left: 9px;
+        h1{
+            text-align: center;
+        }
+        img{
+            margin-right: auto;
+        }
+    }
+    .shop1{
+        bottom: 676px;
+        right: 83px;
+        width: 95px;
+    }
+    .camera-triangle{
+        bottom: 211px;
+        right: 50px;
+        width: 108px;
+    }
+    .shop2{
+        bottom: 772px;
+        left: 63px;
+        width: 100px;
+    }
+    .mini-circle{
+        bottom: 333px;
+        left: 88px;
+        width: 86PX;
+    }
+    .tele{
+        bottom: 375px;
+        left: 130px;
+        width: 109px;
+    }
+}
+}
+/// end dowload
+
+
+//// start footer
+footer{
+    background-image: url(../img/background/background-footer.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 195px;
+    padding-bottom: 45px; 
+    border-radius: 40px;
+   .text-footer{
+        display: inline-flex;
+        margin-right: 480px;
+        margin-top: 100px;
+        .logo-footer{
+            margin-left: 4px;
+            padding-top: 10px;
+        }
+    }
+    .triangle{
+        position: relative;
+        bottom: 647px;
+        right: 200px;
+
+    }
+    .cask{
+        width: 150px;
+        position: relative;
+        bottom: 590px;
+        left: 106px;
+    }
+
+    @include for-size(desktop-down){
+        .text-footer{
+            margin-right: 311px;
+        }
+        .triangle{
+            bottom: 587px;    
+        }
+        .cask{
+            bottom: 530px;
+        }
+    }
+    @include for-size(tablet-landscape-down){
+        .text-footer{
+            margin-right: 100px;
+        }
+        .triangle{
+            bottom: 507px;
+            width: 74px;
+            right: 100px;        }
+        .cask{
+            bottom: 470px;
+            width: 117px;        }
+    }
+    @include for-size(tablet-portrait-down){
+        .text-footer{
+            margin-right: auto;
+            H1{
+                font-size: 26px;
+            }
+            .logo-footer{
+                margin-left: 4px;
+                padding-top: 2px;
+                width: 90px;
+            }
+        }
+        .triangle{
+            bottom: 427px;
+            width: 55px;
+         }
+        .cask{
+            bottom: 400px;
+            width: 94px; 
+          }
+    }
+    @include for-size(phone-only){
+        .text-footer{
+            margin-right: auto;
+            H1{
+                font-size: 20px;
+            }
+            img{
+                width: 77px;
+            }
+            .logo-footer{
+                margin-left: 4px;
+                padding-top: 0px;
+                width: 70px;
+            }
+        }
+        .triangle{
+            bottom: 332px;
+            width: 55px;
+            right: 44px;
+         }
+        .cask{
+            bottom: 329px;
+            left: 59px;
+          }
+    }
+}
+
+///// end footer
+
+

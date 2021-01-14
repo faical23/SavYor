@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "9556663e-3755-418a-88a2-85a5e5a479d1",
+		"name": "BrowserExtentionServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ale@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/user/create",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "57ae67ad-9a05-4c46-9f08-8cde918c571b",
+						"exec": [
+							"var res = pm.response.json();\r",
+							"pm.environment.set(\"authToken\", res.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ale@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/user/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ale@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "new_pass",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "confirm_new_pass",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/password/change",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"password",
+						"change"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ale@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/password/reset",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"password",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Reset password token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d8c8010b-2dee-4d9c-9bf9-6b5021517621",
+						"exec": [
+							"var res = pm.response.json();\r",
+							"pm.environment.set(\"authToken\", res.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "ale@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/password/reset/verify?token=8bvnfbfvskg2d9f8k",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"password",
+						"reset",
+						"verify"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "8bvnfbfvskg2d9f8k"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User data input",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "p_url",
+							"value": "https://www.dji.com/mavic",
+							"type": "text"
+						},
+						{
+							"key": "p_name",
+							"value": "Drone Mavic pro",
+							"type": "text"
+						},
+						{
+							"key": "p_qty",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "current_price",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "pay_card_name",
+							"value": "Innu",
+							"type": "text"
+						},
+						{
+							"key": "pay_card_num",
+							"value": "937497224224",
+							"type": "text"
+						},
+						{
+							"key": "pay_card_cvv",
+							"value": "234",
+							"type": "text"
+						},
+						{
+							"key": "pay_card_exp",
+							"value": "11/22",
+							"type": "text"
+						},
+						{
+							"key": "ship_add_name",
+							"value": "Inayat U",
+							"type": "text"
+						},
+						{
+							"key": "ship_add_1",
+							"value": "Islamabad 1",
+							"type": "text"
+						},
+						{
+							"key": "ship_add_2",
+							"value": "Islamabad 2",
+							"type": "text"
+						},
+						{
+							"key": "ship_add_city",
+							"value": "Islamabad",
+							"type": "text"
+						},
+						{
+							"key": "ship_add_zip",
+							"value": "44000",
+							"type": "text"
+						},
+						{
+							"key": "ship_add_state",
+							"value": "ICT",
+							"type": "text"
+						},
+						{
+							"key": "target_price",
+							"value": "5500",
+							"type": "text"
+						},
+						{
+							"key": "target_period",
+							"value": "8900",
+							"type": "text"
+						},
+						{
+							"key": "tract_active",
+							"value": "y",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Inayat/Pictures/a.jpg",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/user/userinput",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"userinput"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload picture",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "57ae67ad-9a05-4c46-9f08-8cde918c571b",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_url",
+							"value": "https://www.dji.com/mavic",
+							"type": "text"
+						},
+						{
+							"key": "picture_url",
+							"value": "https://media.istockphoto.com/photos/www",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/image/upload",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"image",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Active Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/product/active",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update product info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "57ae67ad-9a05-4c46-9f08-8cde918c571b",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "target_price",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "target_period",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "track_active",
+							"value": "Y",
+							"type": "text"
+						},
+						{
+							"key": "product_url",
+							"value": "https://www.dji.com/mavic",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/user/userinput",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"userinput"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

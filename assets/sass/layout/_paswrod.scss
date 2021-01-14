@@ -1,0 +1,287 @@
+.password{
+    border-radius: 13px;
+    background-color: white;
+    height: 500px; 
+    margin-top: 44px;
+    margin-right: 37px;
+    box-shadow: 3px 25px 46px rgba(110, 110, 139, 0.07);
+
+    h1{
+        font-size: 31px ;
+        font-weight: 700;
+        font-family:'AgencyFB-Bold' ;
+        font-style: normal;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    h6{
+        font-size: 21px ;
+        font-family:'AgencyFB-Regular' ;
+        font-style: normal;
+        color:$secondry-500 ;
+        padding-bottom: 25px;
+    }
+    p{
+        font-size: 19px;
+        font-family:'AgencyFB-Regular' ;
+        font-style: normal;
+        color:$secondry-500 ;
+        text-align: initial;
+    }
+    .input-1{
+        background:none ;
+        border: none;
+        border-bottom: 1px solid rgb(70, 210, 245);
+        width: 100%;
+        padding-bottom: 4px;
+        .password-icon,.see-icon{
+            position: relative;
+            bottom: 3px;
+        }
+        .see-icon{
+            cursor: pointer;
+        }
+    }
+    input{
+        background: none;
+        border: none;
+        width: 88%;
+    }
+    
+    .confirm-pass{
+        padding-top: 40px;
+    }
+    .password-button{
+        padding-top: 55px;
+         .button2{
+            max-width: 300px;
+            padding: 16px 140px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: 'Montserrat-Medium';
+            font-style: normal;
+            font-weight: 500;
+            color:white;
+            background-color: #50B5FF;
+             &:hover{
+                 background-color: white;
+                 color :$primary-100;
+                 border:1px solid $primary-100;
+             }
+          }
+
+     }
+@include for-size(desktop-down){
+        .password-button{
+             .button2{
+                padding: 16px 92px;
+         }
+     }
+     input{
+        width: 80%;
+    }
+}
+@include for-size(tablet-landscape-down){
+    .password-button{
+         .button2{
+            padding: 16px 52px;
+     }
+ }
+ input{
+    width: 70%;
+}
+h1{
+    font-size: 29PX;
+}
+h6{
+    font-size: 17px;
+}
+}
+
+}
+@include for-size(tablet-landscape-down ){
+.footer-password{
+    padding-top: 0px !important;
+    .text-footer{
+        margin-top: 161px;
+    }
+    .triangle{
+        bottom: 379px;
+    }
+    .cask{
+        bottom: 370px;
+    }
+}
+}
+@include for-size(tablet-portrait-down){
+    .hero1{
+        .password-hero{
+            margin-right: -46px !important;
+            margin-left: -9px !important;  
+          }
+          .password{
+              height: 400px;
+          }
+          .password-button{
+              padding-top: 20px;
+            .button2{
+               padding: 16px 20px;
+        }
+
+    }
+    h1{
+        font-size: 21PX;
+    }
+    p{
+        font-size: 15px;
+    }
+    .password .confirm-pass {
+        padding-top: 18px;
+    }
+    }
+}
+@include for-size(phone-only){
+    .hero1{
+        .password-hero{
+            margin-right: -5px !important;
+            margin-left: 30px !important;  
+          }
+          .password{
+            height: 400px;
+            width: 200px;
+              }
+    }
+}
+.view-password{
+    position: relative;
+    width: 138px;
+    left: 81px;
+    bottom: 169px;
+}
+.curbe-password{
+    position: relative;
+    right: 430px;
+}
+.camera-password{
+    position: relative;
+    left: 508px;
+    bottom: 600px;
+    width: 100px;
+}
+.circle-password{
+    position: relative;
+bottom: 718px;
+right: 100px;
+width: 105px;
+}
+.triangle-color-password{
+    position: relative;
+    width: 100px;
+    left: 267px;
+    bottom: 56px;
+}
+@include for-size(desktop-down){
+    .view-password{
+        left: 148px;
+        bottom: 195px;
+    }
+    .curbe-password{
+        right: 340px;
+    }
+    .camera-password{
+        left: 378px;
+    }
+    .circle-password{
+        right: 160px;
+    }
+    .triangle-color-password{
+        left: 147px;
+        bottom: 102px;
+    }
+}
+@include for-size(tablet-landscape-down){
+    .view-password{
+        left: 148px;
+        bottom: 195px;
+    }
+    .curbe-password{
+        right: 240px;
+        bottom: 69px;
+    }
+    .camera-password{
+        left: 278px;
+    }
+    .circle-password{
+        right: 160px;
+    }
+    .triangle-color-password{
+        left: 47px;
+        bottom: 102px;
+    }
+}
+@include for-size(tablet-portrait-down){
+    .view-password{
+       width: 90px;
+       left: 138px;
+       bottom: 180PX;
+    }
+    .curbe-password{
+        right: 153px;
+        bottom: 69px;
+        width: 120px;
+    }
+    .camera-password{
+        left: 218px;
+        width: 63px;
+        bottom: 500px;    }
+    .circle-password{
+        right: 100px;
+        bottom: 586px;    }
+    .triangle-color-password{
+        left: 31px;
+        bottom: 76px;
+        width: 61px;
+    }
+    .triangle-page-password{
+        bottom: 327px !important;
+    }
+    .cask-page-password{
+        bottom: 310px !important;
+    }
+}
+@include for-size(phone-only){
+    .password-hero1-background{
+        height: 700px !important;
+        }
+    .view-password{
+        width: 63px;
+        left: -28px;
+        bottom: 394PX;
+     }
+     .curbe-password{
+        right: 106px;
+        bottom: 139px;
+        width: 96px;
+     }
+     .camera-password{
+        left: 100px;
+        width: 47px;
+        bottom: 460px;
+   }
+     .circle-password{
+        right: 111px;
+        bottom: 740px;
+        width: 74px;
+    }
+     .triangle-color-password{
+        left: 137px;
+        bottom: 100px;
+        width: 46px;
+     }
+     .triangle-page-password{
+        bottom: 240px !important;
+    }
+    .cask-page-password{
+        bottom: 240px !important;
+    }
+}
